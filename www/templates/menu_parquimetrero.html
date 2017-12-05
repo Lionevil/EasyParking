@@ -1,0 +1,53 @@
+<ion-view view-title="Easy Parking" name="menu_parquimetrero-view">
+  <ion-content class="padding">
+  	<div align="center">
+       <img src="img/logo.png" style="height: 123px; width: 280px;">
+    </div>
+    <div class="row">
+    	<div class="col text-center">
+  			<h3>Menú</h3>
+		</div>
+	</div>
+	<!--primera linea-->
+	<div class="row">
+		<div class="col">
+    		<button class="button button-block icon-left ion-ios-stopwatch-outline button-balanced" ng-click="iniciaTemp()">Comprobar reserva</button>
+    	</div>
+    </div>
+    <div class="row">
+    	<div class="col">
+			<button class="button button-block icon-left ion-power button-calm" ng-click="iniciarTurno()">Iniciar Servicio</button>
+		</div>
+	</div>
+	<!--segunda linea-->
+	<div class="row">
+		<div class="col">
+			<button class="button button-block icon-left ion-android-time button-positive" ng-click="terminarTurno()">Terminar Servicio</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<button class="button button-block icon-left ion-android-pin button-energized" ng-click="liberarEstacionamiento()">Liberar Estacionamiento</button>
+		</div>
+	</div>
+	<!--tercera linea-->
+	
+	<div class="row">
+		<div class="col">
+			<button class="button button-block icon-left ion-ios-personadd button-positive" ng-click="nuevoCliente()" >Registrar Nuevo Cliente</button>
+		</div>
+	</div>
+	<!--cuarta linea-->
+	<div class="row">
+		<div class="col text-center">
+			<button class="button button-block icon-left ion-ios-compose-outline button-dark" ng-click="cambiarContrasenia()">Cambiar Contrase&#241a</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col text-center">
+			<button class="button button-block icon-left ion-reply button-assertive" ng-click="salir()">Salir</button>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>
+<!--style="width:160px; height:100px"-->

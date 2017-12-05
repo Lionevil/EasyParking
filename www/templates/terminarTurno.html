@@ -1,0 +1,39 @@
+<ion-view view-title="Easy Parking" name="terminarTurno-view">
+  <ion-content class="padding">
+    <div align="center">
+       <img src="img/logo.png" style="height: 123px; width: 280px;">
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col text-center">
+          <h3>Terminar Servicio</h3>
+      </div>
+    </div>
+    <div class="list">
+      <a class="item item-icon-left item-stable">
+        <i class="ion-android-calendar"></i>
+          Fecha
+        <span class="badge badge-calm">
+          {{fecha | date:'dd-MM-yyyy'}}
+        </span>
+      </a>
+      <br/>
+      <a class="item item-icon-left item-stable">
+        <i class="ion-clock"></i>
+         Hora 
+        <span class="badge badge-calm">{{fecha | date:'HH:mm:ss'}}
+        </span>
+      </a>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button class="button button-block icon-left ion-android-checkmark-circle button-assertive" ng-click="terminarTurno()">Terminar</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button class="button button icon-left  ion-reply button-balanced" ng-click="volverMenu()">Volver</button>
+      </div>
+    </div> 
+  </ion-content>
+</ion-view>

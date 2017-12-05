@@ -1,0 +1,45 @@
+<style>
+   h2{text-align:center;}
+</style>
+<ion-view view-title="Easy Parking" name="login-view">
+  <ion-content class="padding" ng-controller="loginCtrl">
+  <br/><br/>
+    <div align="center">
+       <img src="img/logo.png" style="height: 123px; width: 280px;">
+    </div>
+    <br />
+    <h2>Ingresar</h2>
+    <form name="formLogin" novalidate>
+    <div class="list list-inset" style="margin-top:auto;">
+      <label class="item item-input">
+		    <span class="input-label">R.U.N:</span>
+        <input type="text" placeholder="R.U.N" ng-model="run" ng-minlength="9" required name="run" pattern="\d{3,8}-[\d|kK]{1}" minlength="9" maxlength="12">
+      </label>
+      <label class="item item-input">
+		      <span class="input-label">Password:</span>
+          <input type="password" placeholder="Password" required name="password" ng-model="password" minlength="6">
+      </label>{{mje}}
+      <br/>
+       <div class="padding">
+        <p ng-show="formLogin.run.$error.required">* Rut requerido</p>
+        <p ng-show="formLogin.password.$error.required">* Contraseña requerida</p>
+        <p ng-show="formLogin.run.$error.pattern">* Formato rut incorrecto</p>
+        <p ng-show="formLogin.run.$error.maxlength">* Longitud del RUN invalida</p>
+      </div>
+		  <br />
+		  <div class="row">
+		    <div class="col text-center">  
+		      <button class="button button-block button-balanced icon-left ion-ionic" ng-disabled="formLogin.$invalid" type="button" ng-click="ingresar(run,password)">Ingresar</button>
+   		  </div>
+		  </div>
+		  <div class="row">
+		    <div class="col text-right">
+		      <button class="button button-clear button-positive " ng-click="recuperarClave()">Recuperar Contrase&#241a</button>
+		    </div>
+		  </div>
+      </form>
+      </div>
+  </ion-content>
+</ion-view>
+
+

@@ -1,0 +1,30 @@
+<ion-view view-title="Easy Parking" name="iniciar_temporizador-view">
+	<ion-content class="padding" ng-controller="temporizadorCtrl">
+		<div align="center">
+			<img src="img/logo.png" style="height: 123px; width: 280px;">
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col text-center">
+				<h3>Comprobar Reserva</h3>
+			</div>	   
+		</div>
+
+		<div class="col text-center">
+			<div class ="item">
+				<img src="img/ionic.png">
+				<br><br/>
+				<h2>Escanea un codigo QR</h2​>
+
+			<br><br/>
+
+
+			</div> 
+			<div class ="item">
+				<button class="button button icon-left button-positive" ng-click="leerCodigo()">Escanear</button>
+			
+			<button class="button button icon-left  ion-reply button-balanced" ng-click="volverMenu()">Volver</button>
+		</div>
+	</div>
+</ion-content>
+</ion-view>

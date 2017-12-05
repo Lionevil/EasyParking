@@ -1,0 +1,103 @@
+<ion-view view-title="Easy Parking" name="nuevo_cliente-view">
+  <ion-content class="padding" ng-controller="nuevoClienteCtrl">
+    <div align="center">
+       <img src="img/logo.png" style="height: 123px; width: 280px;">
+    </div>
+    <style>
+        .padding{
+          color: red;
+        }
+    </style>
+    <div class="list list-inset" style="margin-top:auto;">
+      <form novalidate name="formNuevoCliente">
+        <div class="form-group">
+          <div class="row">
+            <div class="col text-center"><h3>Registro Nuevo Usuario</h3></div>
+          </div>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">R.U.N. Usuario (xxxxxxxx-x)</span>
+            <input type="text" placeholder="RUN Usuario" ng-model="nuevoCliente.run" required name="runCliente" pattern="\d{3,8}-[\d|kK]{1}" minlength="9" maxlength="12">
+          </label>
+        </div>
+        <br />
+        <div class="form-group">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Nombre</span>
+            <input type="text" placeholder="Nombre" ng-model="nuevoCliente.nombre" required name="nombreCliente">
+          </label>
+        </div>
+        <br />
+        <div class="form-group">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Apellidos</span>
+            <input type="text" placeholder="Apellidos" ng-model="nuevoCliente.apellido" required name="apellidoCliente">
+          </label>
+        </div>
+        <br />
+        <div class="form-group">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Email</span>
+            <input type="email" placeholder="Email" ng-model="nuevoCliente.email" required name="emailCliente">
+          </label>
+        </div>
+        <br />
+        <div class="form-group">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Contraseña</span>
+            <input type="password" placeholder="Contraseña" ng-model="nuevoCliente.password" required name="passwordCliente" minlength="6">
+          </label>
+        </div>
+        <br />
+        <div class="form-group">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Telefono</span>
+            <input type="number" placeholder="Telefono" ng-model="nuevoCliente.telefono">
+          </label>
+        </div>
+        <br/>
+        <div class="form-group">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Patente Vehiculo (XXXX-00/XX-0000)</span>
+              <input type="text" placeholder="Patente Vehiculo" ng-model="nuevoCliente.patente" required name="patenteCliente" id="patenteClt">
+            </label>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Marca Vehiculo</span>
+              <input type="text" placeholder="Marca Vehiculo" ng-model="nuevoCliente.marca" required name="marcaCliente">
+            </label>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Modelo Vehiculo</span>
+              <input type="text" placeholder="Modelo Vehiculo" ng-model="nuevoCliente.modelo" required name="modeloCliente">
+            </label>
+          </div>
+        <div class="padding">
+          <p ng-show="formNuevoCliente.runCliente.$error.required">* Rut requerido</p>
+          <p ng-show="formNuevoCliente.nombreCliente.$error.required">* Nombre requerido</p>
+          <p ng-show="formNuevoCliente.apellidoCliente.$error.required">* Apellido requerido</p>
+          <p ng-show="formNuevoCliente.emailCliente.$error.required">* Email requerido</p>
+          <p ng-show="formNuevoCliente.passwordCliente.$error.required">* Password requerido</p>
+          <p ng-show="formNuevoCliente.patenteCliente.$error.required">* Patente requerida</p>
+          <p ng-show="formNuevoCliente.marcaCliente.$error.required">* Marca requerida</p>
+          <p ng-show="formNuevoCliente.modeloCliente.$error.required">* Modelo requerido</p>
+          <p ng-show="formNuevoCliente.emailCliente.$invalid && !formNuevoCliente.emailCliente.$pristine">* Email invalido</p>
+          <p ng-show="formNuevoCliente.passwordCliente.$error.minlength">* Password debe de ser minimo 6 caracteres</p>
+          <p ng-show="formNuevoCliente.runCliente.$error.pattern">* Formato rut incorrecto</p>
+        </div>
+		    <div class="row">
+		      <div class="col text-center">
+		        <button class="button button-block ion-left ion-ios-checkmark-outline button-balanced" type="submit" ng-disabled="formNuevoCliente.$invalid" ng-click="registrar()"> Registrar Nuevo Cliente</button>
+		        <button class="button button-block ion-left ion-ios-close-outline button-assertive" ng-click="cancelar()"> Cancelar</button>
+		      </div>
+		    </div>
+    </div>
+    </form>
+	</ion-content>
+  </ion-content>
+</ion-view>

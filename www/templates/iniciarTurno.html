@@ -1,0 +1,58 @@
+<ion-view view-title="Easy Parking" name="iniciarTurno-view">
+  <ion-content class="padding">
+    <div align="center">
+       <img src="img/logo.png" style="height: 123px; width: 280px;">
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col text-center">
+          <h3>Iniciar Servicio</h3>
+      </div>
+    </div>
+    
+    <div class="input-list">
+      <a class="item item-icon-left item-stable">
+        <i class="ion-android-calendar"></i>
+          Fecha
+        <span class="badge badge-calm" value="fecha" id="idFecha">
+          {{fecha | date:'dd-MM-yyyy'}}
+        </span>
+      </a>
+      <br/>
+      <a class="item item-icon-left item-stable">
+        <i class="ion-clock"></i>
+          Hora
+        <span class="badge badge-calm" value="hora" id="idHora">
+          {{fecha | date:'HH:mm:ss'}}
+        </span>
+      </a>
+    </div>
+    <br/>     
+    <div class="input-list">
+      <a class="item item-icon-left item-select item-stable">
+        <i class="ion-android-pin"></i>
+        Zonas  
+
+        <select ng-model="val.seleccion" class="calm">
+
+          <option selected >Seleccionar</option>
+          <option ng-repeat="z in zonas" value="{{z.id_zona}}"
+          >{{z.nombre}}</option>
+        </select>
+  </select>      
+      </a>
+    </div>
+    <br/>
+    <br/>
+    <div class="row">
+      <div class="col text-center">
+        <button class="button button-block icon-left ion-android-checkmark-circle button-balanced" ng-click="registraTurno()">Comenzar</button>
+      </div>
+    </div>    
+    <div class="row">
+      <div class="col text-center">
+        <button class="button button icon-left  ion-reply button-balanced" ng-click="volverMenu()">Volver</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

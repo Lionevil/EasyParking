@@ -1,0 +1,109 @@
+<style>
+ h2{text-align:center;}
+</style>
+<ion-view view-title="Easy Parking" name="Bienvenida-view">
+  <ion-content class="padding"><br/><br/>
+    <div align="center">
+       <img src="img/logo.png" style="height: 123px; width: 280px;">
+    </div>
+    <br />
+  <br/><br/>
+  <h2>Bienvenido a Parking APP</h2>
+  <div class="row">
+  	   <div class="col text-center">
+	   		<button class="button button button-balanced icon-left ion-ionic" ng-click="entrar()">Ingresar</button>		
+	   </div>
+  </div>
+      <div align="center">
+        <img src="img/logo1.png" style="height: 123px; width: 280px;">
+      </div>
+      <div class="list list-inset">
+        <form>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col text-center"><h3>Registro Nuevo Cliente</h3></div>
+            </div>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Rut (xxxxxxxx-x)</span>
+              <input type="text" placeholder="Ingrese Rut" ng-model="nuevoCliente.rutClien" required>
+            </label>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Nombre</span>
+              <input type="text" placeholder="Nombre" ng-model="nuevoCliente.nombreClien" required>
+            </label>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Apellidos</span>
+              <input type="text" placeholder="Apellidos" ng-model="nuevoCliente.apellidoClien" required>
+            </label>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Email</span>
+              <input type="email" placeholder="Email" ng-model="nuevoCliente.emailClien" required>
+            </label>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Constraseña</span>
+              <input type="password" placeholder="Constraseña" ng-model="nuevoCliente.passwordClien" required>
+            </label>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Telefono</span>
+              <input type="tel" placeholder="Telefono" ng-model="nuevoCliente.telefonoClien">
+            </label>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Patente Vehiculo</span>
+              <input type="text" placeholder="Patente Vehiculo" ng-model="nuevoCliente.patenteClien" required>
+            </label>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Marca Vehiculo</span>
+              <input type="text" placeholder="Marca Vehiculo" ng-model="nuevoCliente.marcaClien" required>
+            </label>
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Modelo Vehiculo</span>
+              <input type="text" placeholder="Modelo Vehiculo" ng-model="nuevoCliente.modeloClien" required>
+            </label>
+          </div>
+          <br />
+
+          <div class="row">
+          <div class="col text-center">
+            <button class="button button-block ion-left ion-ios-checkmark-outline button-balanced" ng-click="IngresarCliente()"> Registrar Nuevo Cliente</button>
+            <button class="button button-block ion-left ion-ios-close-outline button-assertive" ng-click="cancelar()"> Cancelar</button>
+          </div>
+          </div>
+        </form>       
+      </div>
+  </ion-content>
+</ion-view>
+
+

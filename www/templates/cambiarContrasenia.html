@@ -1,0 +1,35 @@
+<ion-view view-title="Easy Parking" name="cambiarContrasenia-view">
+  <ion-content class="padding">
+  <br/><br/>
+    <div align="center">
+       <img src="img/logo.png" style="height: 123px; width: 280px;">
+    </div>
+    <br />
+    <div class="row">
+      <div class="col text-center"><h3>Cambio de Contraseña</h3></div>
+    </div>
+    <form>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Clave Actual</span>
+        <input type="password" placeholder="Clave Actual" ng-model="nuevoPass.claveActual" required name="passActual">
+      </label>
+    </div>
+    <br />
+    <div class="form-group">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Nueva Clave</span>
+        <input type="password" placeholder="Nueva Clave" ng-model="nuevoPass.nuevaClave1" required name="passNueva1">
+      </label>
+    </div>
+    <br/>
+    <div class="form-group">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Repita Nueva Clave</span>
+        <input type="password" placeholder="Repita Nueva Clave" ng-model="nuevoPass.nuevaClave2" required name="passNueva2">
+      </label>      
+    </div>
+    <button class="button button-block ion-left ion-ios-checkmark-outline button-balanced" type="submit" ng-click="cambiarPass()"> Cambiar</button>
+    <button class="button button-block ion-left ion-ios-close-outline button-assertive" ng-click="volverMenu()"> Cancelar</button>
+    </form>
+  </ion-content>
+</ion-view>

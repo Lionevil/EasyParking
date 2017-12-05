@@ -1,0 +1,41 @@
+<ion-view view-title="Easy Parking" name="cambiarContrasenia-view">
+  <ion-content class="padding">
+  <meta name="vista" content="width=device-width, initial-scale=1.0">
+
+  <br/><br/>
+    <div align="center">
+       <img src="img/logo.png" style="height: 123px; width: 280px;">
+    </div>
+    <br />
+    <div align="center"><h2>Estacionamientos</h2></div>
+    <br/>
+    <button class="button button-block button-positive" ng-click="actualizar()">Actualizar</button>
+    <br/>
+    <table>
+       <div class="row header" >
+            <div class="col-1">ID</div>
+            <div class="col-2">Patente</div>
+            <div class="col-3">Hora Inicio</div>
+            <div class="col-4">Hora Fin</div>
+            <div class="col-7">Acciones</div>
+          </div>
+          <div class="row" ng-repeat="(id, cupo) in cupos">
+            <div class="col-1">{{cupo.id_cobro}}</div>
+            <div class="col-2">{{cupo.patente}}</div>
+            <div class="col-3">{{cupo.hora_inicio}}</div>
+            <div class="col-4">{{cupo.hora_termino}}</div>
+            <div class="col-5">
+              <button class="button button-small special1" ng-click="multar(cupo)">Multar</button>  
+            </div>
+            <div class="col-6">
+            <button class="button button-small special2" ng-click="liberar(cupo)">Liberar</button>
+            </div>
+          </div>
+        </table>
+    <br/>
+   
+    <button class="button button-block icon-left  ion-reply button-balanced" ng-click="volverMenu()"> Volver</button>
+  </ion-content>
+</ion-view>
+
+
